@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yasin Yumrutaş">
+    <meta name="description" content="{{.Page.Description}}">
+    <title>{{.Page.Name}}</title>
+</head>
+<body>
+<h1>{{.Page.Name}}</h1>
+<p>
+    <ul>
+    {{range.Users}}
+
+    <strong>{{.ID}} - {{.FirstName}} {{.LastName}} </strong><i>by {{.Username}}</i>
+</ul>
+    <br>
+
+    <p>Profil : <a href="{{.Profile}}" target="_blank">varunet/{{.Username}}</a></p>
+
+    <ul>
+    {{range .Interests}}
+
+    <li>{{.ID}} - {{.Name}}</li>
+
+    
+</ul>
+{{end}}
+</p>
+{{end}}
+</body>
+</html>
